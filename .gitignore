@@ -1,6 +1,6 @@
 __pycache__/
-
 dataset_aux/
+.vscode/
 
 *.pyc
 *.pth
