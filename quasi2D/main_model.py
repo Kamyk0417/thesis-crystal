@@ -124,7 +124,7 @@ class UnsupervisedTransformModel(nn.Module):
         self.encoder_affine = Encoder(input_size)
         self.spatial_transformer = Transform(input_size)
         
-        self.auxiliary_discriminator = load_aux_model('./thesis crystal/quasi2D/simple_cnn_model.pth')
+        self.auxiliary_discriminator = load_aux_model('./quasi2D/simple_cnn_model.pth')
         
         for param in self.auxiliary_discriminator.parameters():
             param.requires_grad = False
@@ -194,7 +194,7 @@ def main():
     batch_size = 16
     epochs = 20
     
-    dataset = CrystalData(size=30, input_size=input_size)
+    dataset = CrystalData(size=1, input_size=input_size)
     dataloader = torch.utils.data.DataLoader(
         dataset, 
         batch_size=batch_size, 

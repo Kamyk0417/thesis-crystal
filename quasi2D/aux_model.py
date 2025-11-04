@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from tqdm import tqdm
 
-DATASET_DIR = "./thesis crystal/quasi2D/dataset_aux/"
+DATASET_DIR = "./quasi2D/dataset_aux/"
 CLASS_0_DIR = os.path.join(DATASET_DIR, "class0/")
 CLASS_1_DIR = os.path.join(DATASET_DIR, "class1/")
 BATCH_SIZE = 8
@@ -272,7 +272,7 @@ def main():
 
     print(f'\nFinal Test Accuracy: {100 * correct / total:.2f}%')
 
-    torch.save(model.state_dict(), './thesis crystal/quasi2D/simple_cnn_model.pth')
+    torch.save(model.state_dict(), './quasi2D/simple_cnn_model.pth')
 
 
 if __name__ == "__main__":
